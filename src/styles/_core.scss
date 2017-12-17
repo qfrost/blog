@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+    margin: 0;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+// CARD == POSTS
+
+.home-page {
+    padding: 20px 0;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.admin-page {
+    margin: 20px 0;
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span routerLink="/" routerLinkActive="active">Blog</span>
+    <span class="spacer"></span>
+    <span>Hello, Guest</span>
+    <div>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span routerLink="/admin" routerLinkActive="active">Log In</span>
+        </button>
+        <!-- <button mat-menu-item>
+          <mat-icon>backspace</mat-icon>
+          <span routerLink="/admin" routerLinkActive="active">Registration</span>
+        </button> -->
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

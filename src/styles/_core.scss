@@ -23,4 +23,9 @@ body {
 .admin-page {
     margin: 20px 0;
     text-align: center;
+    &__sign {
+        font-size: 12px;
+        display: inline-block;
+        padding: 15px 0;
+    }
 }

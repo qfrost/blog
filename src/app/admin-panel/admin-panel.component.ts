@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppServices } from '../shared/app.services';
 
 @Component({
   selector: 'app-admin-panel',
@@ -7,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminPanelComponent implements OnInit {
 
-  hidePass = true;
+  username:string = '';  
 
-  constructor() { }
+  constructor(private _data:AppServices) { }
 
   ngOnInit() {
+    this.username = this._data.username;
   }
 
 }

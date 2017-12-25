@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AppServices } from '../app.services';
+import { AppServices } from '../shared/app.services';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  providers: [AppServices]
 })
 export class HomeComponent implements OnInit {
 
@@ -14,12 +13,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private _data: AppServices) { }
 
-  ngOnInit() : void {
+  ngOnInit() {
     this._data.getPosts().subscribe(
-      data => {
-        this.posts = data;
-      }
+      (res) => {
+          console.log(res);
+      },
+      (err) => console.log("error : " + err)
     );
   }
-
 }

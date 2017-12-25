@@ -1,0 +1,24 @@
+<div class="admin-page">
+  <div class="container">
+    <div class="row justify-content-center">
+      <form action="">
+          <div class="col-md-12">
+              <mat-form-field>
+                <input matInput placeholder="Name" [(ngModel)]="username" name="username">
+              </mat-form-field>
+          </div>
+          <div class="col-md-12">
+              <mat-form-field>
+                <input matInput placeholder="Enter your password" type="password" [(ngModel)]="password" name="password">
+              </mat-form-field>
+          </div>
+          <div class="col-md-12">
+              <button mat-raised-button color="primary" type="submit" (click)="logIn()">Log In</button>
+          </div>
+          <div class="col-md-12" routerLink="/sign-up" routerLinkActive="active">
+            <span class="admin-page__sign">Sign Up</span>
+          </div>
+      </form>
+    </div>
+  </div>      
+</div>

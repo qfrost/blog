@@ -1,0 +1,9 @@
+<form>
+    <mat-form-field class="col-md-12">
+      <input matInput placeholder="Name" [(ngModel)]="data.name" name="name">
+    </mat-form-field>
+    <mat-form-field class="col-md-12">
+        <textarea matInput placeholder="Content of post..." rows="4" [(ngModel)]="data.content" name="content"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="onNoClick()">Add Post</button>
+</form>

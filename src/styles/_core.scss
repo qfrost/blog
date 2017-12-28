@@ -9,15 +9,35 @@ body {
     flex: 1 1 auto;
 }
 
+.mat-card-header-text {
+    margin:  0 !important;
+}
+
 // CARD == POSTS
 
 .home-page {
     padding: 20px 0;
+    &__title {
+        text-align: center;
+        margin: 10px 0;
+    }
 }
 
-.example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+.home-card {
+    padding: 20px 0;
+    &__title {
+        font-size: 16px !important;
+        font-weight: 700;
+    }
+    &__label {
+        margin: 15px 0;
+    }
+}
+
+.home-form {
+    &__field {
+        margin-top: 15px;
+    }
 }
 
 .admin-page {
@@ -27,5 +47,10 @@ body {
         font-size: 12px;
         display: inline-block;
         padding: 15px 0;
+    }
+    &__add-post {
+        position: fixed;
+        bottom: 20px;
+        right: 40px;
     }
 }

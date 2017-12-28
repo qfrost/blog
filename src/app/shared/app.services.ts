@@ -2,36 +2,51 @@ import {Injectable} from '@angular/core';
 import {Http, Headers, Response, Jsonp, RequestOptions} from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/delay';
 
 @Injectable()
 export class AppServices{
-    private _url           = 'api';
-    public username:string = 'Guest';
+    private _url = 'http://localhost:3000';
 
     constructor(private _http : Http) { }
 
+    // Get data
+
     getPosts() {
-        return this._http.get(`${this._url}/posts.json`).map(res => res.json());
+        return this._http.get(`${this._url}/posts`).map(res => res.json()).delay(500);
+    }
+
+    getComments() {
+        return this._http.get(`${this._url}/comments`).map(res => res.json());
     }
 
     getUsers() {
-        return this._http.get(`${this._url}/users.json`).map(res => res.json());
+        return this._http.get(`${this._url}/profile`).map(res => res.json());
     }
+
+    // Post data
 
     addUser(user) {
-        let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
-        let body = JSON.stringify(user);
-        return this._http.post('/api/users.json', body, options ).map((res: Response) => res.json());
+        return this._http.post(`${this._url}/profile`, user).map((res: Response) => res.json());
     }
 
-    private extractData(res: Response) {
-        let body = res.json();
-        return body.data || {};
+    addComments(comment) {
+        return this._http.post(`${this._url}/comments`, comment).map((res: Response) => res.json());
     }
 
-    private handleError (error: Response | any) {
-        console.error(error.message || error);
-        return Observable.throw(error.message || error);
+    addPost(post){
+        return this._http.post(`${this._url}/posts`, post).map((res: Response) => res.json());
+    }
+
+    // Update data
+
+    updatePost(post) {
+        return this._http.put(`${this._url}/posts/${post.id}`, { "name" : post.name, "content" : post.content }).map((res: Response) => res.json());
+    }
+
+    // Delete data
+
+    deletePost(id){
+        return this._http.delete(`${this._url}/posts/${id}`).map((res: Response) => res.json());
     }
 }

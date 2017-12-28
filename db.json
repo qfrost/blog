@@ -1,15 +1,73 @@
 {
-    "posts": [
-      { "id": 1, "name" : "Shiba Inu", "content" : "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting." },
-      { "id": 2, "name" : "Shiba Inu", "content" : "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting." },
-      { "id": 3, "name" : "Shiba Inu", "content" : "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting." }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 },
-      { "id": 2, "body": "some comment", "postId": 1 }
-    ],
-    "profile": {
-      "username" : "admin",
-      "password" : "admin" 
+  "posts": [
+    {
+      "name": "Shiba Inu",
+      "content": "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.",
+      "id": 1
+    },
+    {
+      "name": "Shiba Inu",
+      "content": "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.",
+      "id": 3
+    },
+    {
+      "name": "aaas",
+      "content": "ssss",
+      "id": 4
     }
+  ],
+  "comments": [
+    {
+      "body": "some comment",
+      "postId": 1,
+      "id": 1
+    },
+    {
+      "postId": 1,
+      "body": "aaa",
+      "id": 2
+    },
+    {
+      "postId": 3,
+      "body": "asadas",
+      "id": 4
+    },
+    {
+      "name": "test",
+      "content": "test",
+      "id": 7
+    },
+    {
+      "name": "aaa",
+      "content": "sss",
+      "id": 8
+    },
+    {
+      "name": "aaaa",
+      "content": "ssss",
+      "id": 9
+    }
+  ],
+  "profile": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "id": 0
+    },
+    {
+      "id": 1
+    },
+    {
+      "username": "qfrost",
+      "password": "123",
+      "repassword": "123",
+      "id": 2
+    },
+    {
+      "username": "qfrost",
+      "password": "123",
+      "repassword": "123",
+      "id": 3
+    }
+  ]
 }

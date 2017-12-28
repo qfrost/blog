@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppData } from '../shared/app.data';
 
 @Component({
   selector: 'app-navigation',
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+  username:string = '';
 
-
-  constructor() { }
+  constructor(private _data:AppData) { }
 
   ngOnInit() {
-
+    this.username = this._data.username;
   }
 
 }
